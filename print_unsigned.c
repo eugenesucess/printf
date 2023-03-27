@@ -4,24 +4,36 @@
 
 int print_unsig(va_list u)
 {
-    int num, digit, reversed = 0;
+	unsigned int len, powten, j, digit, n, num;
+	int count = 0;
 
-    num = va_arg(u, unsigned int);
-
-    if (!num)
-        return (-1);
-    while (num != 0)
-    {
-        digit = num % 10;
-        reversed = reversed * 10 + digit;
-        num /= 10;
-    }
-
-    while (reversed != 0)
-    {
-        digit = reversed % 10;
-        _putchar(digit + '0');
-        reversed /= 10;
-    }
-    return (num);
+	n = va_arg(u, unsigned int);
+	if (n != 0)
+	{
+		num = n;
+		len = 0;
+		while (num != 0)
+		{
+			num /= 10;
+			len++;
+		}
+		powten = 1;
+		for (j = 1; j <= len - 1; j++)
+			powten *= 10;
+		for (j = 1; j <= len; j++)
+		{
+			digit = n / powten;
+			_putchar(digit + '0');
+			count++;
+			n -= digit * powten;
+			powten /= 10;
+		}
+	}
+	else
+	{
+		_putchar('0');
+		return (1);
+	}
+	return (count);
 }
+
