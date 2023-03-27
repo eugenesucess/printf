@@ -6,7 +6,7 @@
 
 /**
  * struct modify - Struct for format
- * @modifier: character which shows what to print
+ * @modifiers: character which shows what to print
  * @f: The function pointer
  */
 
@@ -25,10 +25,10 @@ int print_string(va_list s);
 int print_number(va_list i);
 int print_mod(va_list mod);
 int print_dec(va_list d);
-/*int print_rev(va_list r);*/
-/*int print_bin(va_list b);*/
+int print_rev(va_list r);
+int print_bin(va_list b);
 int print_unsig(va_list u);
-/*int print_octal(va_list o);*/
+int print_octal(va_list o);
 int print_x(va_list x);
 int print_rev_string(va_list args);
 

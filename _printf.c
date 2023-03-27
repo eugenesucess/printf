@@ -14,14 +14,14 @@ int (*functions(const char *format))(va_list)
 	eachModifier fun_used[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"d", print_number},
+		{"d", print_dec},
 		{"i", print_number},
-		/*        {"r", print_rev},*/
+	        {"r", print_rev},
 		{"%", print_mod},
-		/*        {"b", print_bin},*/
-		/*        {"o", print_octal},*/
+	        {"b", print_bin},
+	        {"o", print_octal},
 		{"u", print_unsig},
-		/*        {"x", print_x},*/
+	        {"x", print_x},
 		{NULL, NULL},
 	};
 
