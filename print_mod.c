@@ -9,9 +9,9 @@
 */
 int print_mod(va_list mod)
 {
-    (void)mod;
+	(void)mod;
 
-    _putchar('%');
+	_putchar('%');
 
-    return (1);
+	return (1);
 }
