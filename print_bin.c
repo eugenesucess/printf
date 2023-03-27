@@ -9,7 +9,18 @@
 */
 int print_bin(va_list b)
 {
-	unsigned int len, powten, j, digit, n, num;
+	
+	    int decNum;
+    decNum = va_arg(b, int);
+
+    if (decNum > 1)
+        print_bin(decNum / 2);
+
+
+    _putchar((decNum % 2)? '1':'0');
+
+    return (1);
+	/*unsigned int len, powten, j, digit, n, num;
 	int count = 0;
 
 	n = va_arg(b, unsigned int);
@@ -40,4 +51,5 @@ int print_bin(va_list b)
 		return (1);
 	}
 	return (count);
+	*/
 }
