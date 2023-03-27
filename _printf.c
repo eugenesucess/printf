@@ -16,7 +16,7 @@ int (*functions(const char *format))(va_list)
         {"%", print_mod},
 /*        {"b", print_bin},*/
 /*        {"o", print_octal},*/
-/*        {"u", print_unsig},*/
+        {"u", print_unsig},
 /*        {"x", print_x},*/
         {NULL, NULL},
     };
