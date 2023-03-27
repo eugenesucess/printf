@@ -3,7 +3,6 @@
 #include <stdarg.h>
 #include "main.h"
 
-//function pointer that get the specifier
 
 int (*functions(const char *format))(va_list)
 {
