@@ -7,7 +7,6 @@
 * @mod: param1
 * Return: 1;
 */
-
 int print_mod(va_list mod)
 {
     (void)mod;
