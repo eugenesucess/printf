@@ -1,6 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#include <stdio.h>
 #include <stdarg.h>
+
+/**
+ * struct modify - Struct for format
+ * @modifier: character which shows what to print
+ * @f: The function pointer
+ */
 
 typedef struct modify
 {
