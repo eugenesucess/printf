@@ -4,25 +4,24 @@
 
 int print_unsig(va_list u)
 {
-    int myUnsignedInt;
+    int num, digit, reversed = 0;
 
-    myUnsignedInt = va_arg(u, unsigned int);
+    num = va_arg(u, unsigned int);
 
-    if (!myUnsignedInt)
+    if (!num)
         return (-1);
-
-    if (myUnsignedInt)
+    while (num != 0)
     {
-        if (myUnsignedInt >= 10)
-        {
-            myUnsignedInt = myUnsignedInt / 10;
-            _putchar(myUnsignedInt + '0');
-            myUnsignedInt = myUnsignedInt % 10;
-            _putchar(myUnsignedInt + '0');
-            _putchar(' ');
-        }
-        _putchar(myUnsignedInt + '0');
+        digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num /= 10;
     }
 
-    return (-1);
+    while (reversed != 0)
+    {
+        digit = reversed % 10;
+        _putchar(digit + '0');
+        reversed /= 10;
+    }
+    return (num);
 }
