@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <conio.h>
 #include "main.h"
 
 /**
@@ -9,36 +10,14 @@
 */
 int print_bin(va_list b)
 {
-	unsigned int len, powten, j, digit, n, num;
-	int count = 0;
-
-	n = va_arg(b, unsigned int);
-	if (n != 0)
+	int num = 0, temp = 0, rem;
+	bin = va_arg(b, int);
+	while (bin!= 0)
 	{
-		num = n;
-		len = 0;
-		while (num != 0)
-		{
-			num /= 2;
-			len++;
-		}
-		powten = 1;
-		for (j = 1; j <= len - 1; j++)
-			powten *= 2;
-		for (j = 1; j <= len; j++)
-		{
-			digit = n / powten;
-			_putchar(digit + '0');
-			count++;
-			n -= digit * powten;
-			powten /= 2;
-		}
-	}
-	else
-	{
-		_putchar('0');
-		return (1);
-	}
-	return (count);
-
+		rem = bin % 10;
+		bin /= 10;
+		num = num+ rem * pow( 2, temp);
+		temp++;
+	}  
+	return (num);
 }
