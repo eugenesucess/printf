@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include <conio.h>
 #include "main.h"
 
 /**
