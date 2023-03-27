@@ -2,9 +2,15 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * print_unsig -> print positive number
+ * @u: param
+ * Return: number positive
+ */
+
 int print_unsig(va_list u)
 {
-	unsigned int len, powten, j, digit, n, num;
+	unsigned int len, pow, j, digit, n, num;
 	int count = 0;
 
 	n = va_arg(u, unsigned int);
@@ -17,16 +23,16 @@ int print_unsig(va_list u)
 			num /= 10;
 			len++;
 		}
-		powten = 1;
+		pow = 1;
 		for (j = 1; j <= len - 1; j++)
-			powten *= 10;
+			pow *= 10;
 		for (j = 1; j <= len; j++)
 		{
-			digit = n / powten;
+			digit = n / pow;
 			_putchar(digit + '0');
 			count++;
-			n -= digit * powten;
-			powten /= 10;
+			n -= digit * pow;
+			pow /= 10;
 		}
 	}
 	else
