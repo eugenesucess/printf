@@ -3,6 +3,25 @@
 #include <stdarg.h>
 #include "main.h"
 
+int (*functions(const char *format))(va_list)
+{
+    unsigned int i = 0;
+    eachModifier fun_used[] ={
+        {"c", print_char},
+        {"s", print_string},
+        {"%", print_mod},
+        {NULL, NULL},
+    };
+
+while (fun_used[i].modifier)
+{
+  if (fun_used[i].modifier[0] == (*format))
+    return (fun_used[i].f);
+  i++;
+  }
+return (NULL);
+}
+
 int _printf(const char *format, ...)
 {
 va_list otherArgs;
