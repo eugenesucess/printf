@@ -3,19 +3,19 @@
 #include "main.h"
 
 /**
-* print_bin - convert to binary
+* print_bin - this function convert to binary
 * @b: number in decinal
 * Return: number of chars printed
 */
 int print_bin(va_list b)
 {
-	unsigned int len, powten, j, digit, n, num;
+	unsigned int len, powten, j, digit, x, num;
 	int count = 0;
 
-	n = va_arg(b, unsigned int);
-	if (n != 0)
+	x = va_arg(b, unsigned int);
+	if (x != 0)
 	{
-		num = n;
+		num = x;
 		len = 0;
 		while (num != 0)
 		{
@@ -27,10 +27,10 @@ int print_bin(va_list b)
 			powten *= 2;
 		for (j = 1; j <= len; j++)
 		{
-			digit = n / powten;
+			digit = x / powten;
 			_putchar(digit + '0');
 			count++;
-			n -= digit * powten;
+			x -= digit * powten;
 			powten /= 2;
 		}
 	}
