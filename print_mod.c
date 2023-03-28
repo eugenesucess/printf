@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
-* print_mod -> show modulus
+* print_mod - funtion to show modulus
 * @mod: param1
 * Return: 1;
 */
