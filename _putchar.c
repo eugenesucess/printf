@@ -1,10 +1,9 @@
-#include "main.h"
 #include <unistd.h>
 
 /**
- * _putchar -> print something
- * @c: char
- * Return: int
+ * _putchar - write character c to the stdout
+ * @c: the character
+ * Return: 1 on success and -1 otherwise
  */
 
 int _putchar(char c)
