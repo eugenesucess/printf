@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_number -> print in
+ * print_number - function to  print a number
  * @i: integer to print
  * Return: int
  */
