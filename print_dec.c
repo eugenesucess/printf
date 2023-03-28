@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_dec -> print in
+ * print_dec - print in
  * @d: integer to print
  * Return: int
  */
