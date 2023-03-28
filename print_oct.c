@@ -4,7 +4,7 @@
 * print_octal - unsigned int argument is converted to unsigned octal
 * @o: unsigned to be converted
 * Descriptions: prints unsigned octal
-i* Return: size the output
+* Return: size the output
 */
 int print_octal(va_list o)
 {
