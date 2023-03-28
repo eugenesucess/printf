@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_char -> print char
+ * print_char - function to print char
  * @c: param
  * Return: int
  */
