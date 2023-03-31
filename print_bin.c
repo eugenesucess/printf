@@ -9,29 +9,29 @@
 */
 int print_bin(va_list b)
 {
-	unsigned int len, powten, j, digit, x, num;
+	unsigned int len, toten, i, digit, n, num;
 	int count = 0;
 
-	x = va_arg(b, unsigned int);
-	if (x != 0)
+	n = va_arg(b, unsigned int);
+	if (n != 0)
 	{
-		num = x;
+		num = n;
 		len = 0;
 		while (num != 0)
 		{
 			num /= 2;
 			len++;
 		}
-		powten = 1;
-		for (j = 1; j <= len - 1; j++)
-			powten *= 2;
-		for (j = 1; j <= len; j++)
+		toten = 1;
+		for (i = 1; i <= len - 1; i++)
+			toten *= 2;
+		for (i = 1; i <= len; i++)
 		{
-			digit = x / powten;
+			digit = n / toten;
 			_putchar(digit + '0');
 			count++;
-			x -= digit * powten;
-			powten /= 2;
+			n -= digit * toten;
+			toten /= 2;
 		}
 	}
 	else
